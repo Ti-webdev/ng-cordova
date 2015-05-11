@@ -4145,6 +4145,10 @@ angular.module('ngCordova.plugins.keyboard', [])
         return cordova.plugins.Keyboard.close();
       },
 
+      show: function () {
+        return cordova.plugins.Keyboard.show();
+      },
+
       disableScroll: function (bool) {
         return cordova.plugins.Keyboard.disableScroll(bool);
       },
@@ -6530,6 +6534,13 @@ angular.module('ngCordova.plugins.statusbar', [])
     return {
       overlaysWebView: function (bool) {
         return StatusBar.overlaysWebView(!!bool);
+      },
+      
+      STYLES: {
+        DEFAULT: 0,
+        LIGHT_CONTENT: 1,
+        BLACK_TRANSLUCENT: 2,
+        BLACK_OPAQUE: 3
       },
 
       style: function (style) {
